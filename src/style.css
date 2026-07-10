@@ -1,0 +1,237 @@
+/* ===========================
+   Cloud Notes App style.css
+   =========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ---------- Login Card ---------- */
+.login-card {
+  width: 420px;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+  border: 1px solid rgba(255, 255, 255, .3);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo h1 {
+  color: white;
+  font-size: 34px;
+}
+
+.logo p {
+  color: #f1f1f1;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: white;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, .7);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #1f7cff;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.login-btn:hover {
+  background: #1f7cff;
+  color: white;
+  transform: scale(1.03);
+}
+
+#message {
+  margin-top: 15px;
+  text-align: center;
+  color: #ffe082;
+  font-weight: bold;
+}
+
+/* ---------- Dashboard ---------- */
+.dashboard {
+  width: 700px;
+  max-width: 95%;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(15px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+  border: 1px solid rgba(255, 255, 255, .3);
+  color: white;
+}
+
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard h1 {
+  font-size: 26px;
+}
+
+#logoutBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #1f7cff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-section button,
+.create-note button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #1f7cff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-note {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, .1);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.create-note input,
+.create-note textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.create-note textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+#notesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.note-card {
+  background: rgba(255, 255, 255, .2);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.note-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.note-card p {
+  font-size: 13px;
+  color: #f1f1f1;
+}
+
+.note-card button {
+  margin-top: 8px;
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: #1f7cff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-card {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .logo h1 {
+    font-size: 28px;
+  }
+
+  #notesContainer {
+    grid-template-columns: 1fr;
+  }
+}
