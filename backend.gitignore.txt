@@ -1,0 +1,24 @@
+# Maven build output
+target/
+
+# compiled class files
+*.class
+
+# packaged jars (build these yourself via mvn package)
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+
+# AWS credentials — never commit these
+.aws/
+*.pem
